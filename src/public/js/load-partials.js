@@ -23,6 +23,7 @@ window.addEventListener('load', function() {
         if (this.readyState == 4 && this.status == 200)
         {
             background.innerHTML = this.responseText;
+            themeSwitcher(getCookie("theme"));
         }
     };
 

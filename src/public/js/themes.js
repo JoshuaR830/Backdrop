@@ -15,14 +15,34 @@ function themeSwitcher(theme) {
     switch (theme) {
         case "light":
             lightThemeButton.classList.add('selected');
+            document.cookie = "theme=light";
             lightTheme();
             break;
         case "dark":
             darkThemeButton.classList.add('selected');
+            document.cookie = "theme=dark";
             darkTheme();
             break;
         case "black":
             blackThemeButton.classList.add('selected');
+            document.cookie = "theme=black";
+            blackTheme();
+            break;
+        default:
+            defaultTheme();
+            break;
+    }
+}
+
+function fastThemeSwitcher(theme) {
+    switch (theme) {
+        case "light":
+            lightTheme();
+            break;
+        case "dark":
+            darkTheme();
+            break;
+        case "black":
             blackTheme();
             break;
         default:
@@ -105,4 +125,15 @@ function defaultTheme() {
 
     root.style.setProperty('--error', '#B00020');
     root.style.setProperty('--on-error', '#ed323b');
+}
+
+function getCookie(name) {
+    var cookies = document.cookie.split(';');
+    name = `${name}=`
+    for(var i = 0; i < cookies.length; i++) {
+        if(cookies[i].indexOf(name) >= 0) {
+            cookie = cookies[i].trim().replace(name, '');
+        }
+    }
+    return cookie;
 }

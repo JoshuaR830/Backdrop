@@ -1,6 +1,11 @@
 .theme-switcher {
     fill: var(--on-primary);
-    display: inline-block;
+    display: block;
+    border-bottom: 1px solid var(--secondary);
+    padding: 16px;
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .theme {
@@ -18,4 +23,10 @@
 
 .selected {
     background-color: var(--secondary);
+}
+
+.option-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--on-primary);
 }

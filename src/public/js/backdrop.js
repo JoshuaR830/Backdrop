@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+    fastThemeSwitcher(getCookie("theme"));
     var buttons = document.querySelectorAll('.button');
     var foreground = document.getElementById('foreground');
     var menuReveal = document.getElementById("menu-reveal");
