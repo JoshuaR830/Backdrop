@@ -15,7 +15,6 @@ window.addEventListener('load', function() {
         foreground.classList.remove('animated-scroll-backwards');
         foregroundButton.style.display = 'inline-block';
         reveal.classList.add('reveal-foreground');
-        
         backgroundContainer.style.overflow = "auto";
     });
 

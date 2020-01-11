@@ -101,6 +101,7 @@ body, html {
     text-align: center;
     z-index: 2;
     overflow: auto;
+    position: fixed;
 }
 
 .reveal-foreground:hover {
@@ -124,7 +125,6 @@ body, html {
     animation-name: animated-scroll-forwards;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    position: fixed;
 }
 
 .animated-scroll-backwards {
