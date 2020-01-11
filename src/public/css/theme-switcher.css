@@ -1,0 +1,21 @@
+.theme-switcher {
+    fill: var(--on-primary);
+    display: inline-block;
+}
+
+.theme {
+    display: inline-block;
+    padding: 16px;
+    margin:8px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.theme:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px var(--secondary);
+}
+
+.selected {
+    background-color: var(--secondary);
+}

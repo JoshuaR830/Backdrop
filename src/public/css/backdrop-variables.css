@@ -1,23 +1,22 @@
 :root {
     /* Create a colour scheme here */
     --primary: #8b4cb5;
-    /*--primary-variant: #B680D1;*/
+    --primary-variant: #B680D1;
     --on-primary: #ffffff;
 
-    --secondary: #7d0080;
-    /* --secondary-variant: #b54cab; */
+    --secondary: #00b9c7;
+    --secondary-variant: #008084;
     --on-secondary: #ffffff;
     
-    --background: #4d4654;
+    --background: #8b4cb5;
     --on-background: #ffffff;
     
-    --surface: #635870;
-    --on-surface: #ffffff;
+    --surface: #ffffff;
+    --on-surface: #000000;
     
-    --error: #B00020;
+    --error: #780018;
     --on-error: #ffffff;
 
     /* Create some height variables here */
     --height: 56px;
-
 }

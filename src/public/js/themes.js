@@ -3,6 +3,53 @@ window.addEventListener('load', function() {
     root = document.documentElement;
 });
 
+function themeSwitcher(theme) {
+    var lightThemeButton = document.getElementById('light-theme');
+    var darkThemeButton = document.getElementById('dark-theme');
+    var blackThemeButton = document.getElementById('black-theme');
+
+    lightThemeButton.classList.remove('selected');
+    darkThemeButton.classList.remove('selected');
+    blackThemeButton.classList.remove('selected');
+
+    switch (theme) {
+        case "light":
+            lightThemeButton.classList.add('selected');
+            lightTheme();
+            break;
+        case "dark":
+            darkThemeButton.classList.add('selected');
+            darkTheme();
+            break;
+        case "black":
+            blackThemeButton.classList.add('selected');
+            blackTheme();
+            break;
+        default:
+            defaultTheme();
+            break;
+    }
+}
+
+function lightTheme() {
+    root.style.setProperty('--primary', '#8b4cb5');
+    root.style.setProperty('--primary-variant', '#B680D1');
+    root.style.setProperty('--on-primary', '#ffffff');
+
+    root.style.setProperty('--secondary', '#00b9c7');
+    root.style.setProperty('--secondary-variant', '#008084');
+    root.style.setProperty('--on-secondary', '#ffffff');
+
+    root.style.setProperty('--background', '#8b4cb5');
+    root.style.setProperty('--on-background', '#ffffff');
+
+    root.style.setProperty('--surface', '#ffffff');
+    root.style.setProperty('--on-surface', '#000000');
+
+    root.style.setProperty('--error', '#780018');
+    root.style.setProperty('--on-error', '#ffffff');
+}
+
 function darkTheme() {
     root.style.setProperty('--primary', '#540078');
     root.style.setProperty('--primary-variant', '#9200d1');
@@ -41,25 +88,6 @@ function blackTheme() {
     root.style.setProperty('--on-error', '#ffffff');
 } 
 
-function lightTheme() {
-    root.style.setProperty('--primary', '#8b4cb5');
-    root.style.setProperty('--primary-variant', '#B680D1');
-    root.style.setProperty('--on-primary', '#ffffff');
-
-    root.style.setProperty('--secondary', '#00b9c7');
-    root.style.setProperty('--secondary-variant', '#008084');
-    root.style.setProperty('--on-secondary', '#ffffff');
-
-    root.style.setProperty('--background', '#8b4cb5');
-    root.style.setProperty('--on-background', '#ffffff');
-
-    root.style.setProperty('--surface', '#ffffff');
-    root.style.setProperty('--on-surface', '#000000');
-
-    root.style.setProperty('--error', '#ff0000');
-    root.style.setProperty('--on-error', '#780018');
-}
-
 function defaultTheme() {
     root.style.setProperty('--primary', '#8b4cb5');
     root.style.setProperty('--primary-variant', '#B680D1');
@@ -77,8 +105,4 @@ function defaultTheme() {
 
     root.style.setProperty('--error', '#B00020');
     root.style.setProperty('--on-error', '#ed323b');
-}
-
-function themeSwitcher() {
-
 }
