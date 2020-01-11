@@ -3,9 +3,10 @@ window.addEventListener('load', function() {
     var foreground = document.getElementById('foreground');
     var menuReveal = document.getElementById("menu-reveal");
     var menuHide = document.getElementById('menu-hide');
-    var container = document.querySelector('.content-container');
+    var container = document.querySelector('.foreground-content-container');
     var reveal = document.querySelector('.subtitle-container');
     var foregroundButton = document.querySelector('.show-foreground-button');
+    var backgroundContainer = this.document.querySelector('.background-content-container');
 
     menuReveal.addEventListener('click', function(event) {
         console.log("menu clicked");
@@ -14,6 +15,8 @@ window.addEventListener('load', function() {
         foreground.classList.remove('animated-scroll-backwards');
         foregroundButton.style.display = 'inline-block';
         reveal.classList.add('reveal-foreground');
+        
+        backgroundContainer.style.overflow = "auto";
     });
 
     var menuHide = document.getElementById('menu-hide');
@@ -46,6 +49,7 @@ window.addEventListener('load', function() {
         foreground.classList.add('animated-scroll-backwards');
         foreground.classList.remove('animated-scroll-forwards');
         container.style.display = 'inline-block';
+        backgroundContainer.style.overflow = "hidden";
         menuHidden();
     }
 
