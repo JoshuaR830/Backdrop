@@ -1,7 +1,6 @@
 body, html {
     width: 100%;
     height: 100vh;
-    background-color: red;
     margin: 0px;
 }
 
@@ -9,33 +8,32 @@ body, html {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: yellow;
     margin: 0px;
 }
 
 .background {
-    /* position: absolute; */
+    background-color: var(--primary);
     width: 100%;
     height: 100%;
-    background-color: var(--primary);
     z-index: 1;
 }
 
 
 .title-bar {
+    background-color: var(--primary);
+    color: var(--on-primary);
     display: inline-block;
     position: relative;
     vertical-align: top;
-    color: var(--text-color);
 }
 
 .menu {
+    fill: var(--on-primary);
     display: inline-block;
     padding: 16px;
     height: 24px;
     width: 24px;
     vertical-align: top;
-    fill: var(--text-color);
 }
 
 .menu:hover {
@@ -52,16 +50,16 @@ body, html {
 }
 
 .subtitle-container {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    border-bottom: 1px solid var(--primary);
     height: 48px;
     overflow: hidden;
-    color: var(--text-color);
     position: fixed;
     z-index: 3;
     width: calc(100% - 32px);
     margin-left: 16px;
-    background-color: var(--primary-variant);
     text-align: left;
-    border-bottom: 1px solid var(--primary);
 }
 
 .subtitle {
@@ -83,8 +81,6 @@ body, html {
 }
 .foreground-container {
     height: calc(100vh - var(--height));
-    /* position: absolute; */
-    /* margin-top: var(--height); */
     margin-top: calc(-100vh + var(--height));
     z-index: 2;
     width: 100%;
@@ -92,9 +88,10 @@ body, html {
 }
 
 .foreground {
+    background-color: var(--surface);
+    color: var(--on-surface);
     width: 100%;
     top: var(--height);
-    background-color: var(--primary-variant);
     border-radius: 16px 16px 0 0;
     height: calc(100vh - var(--height));
     display: inline-block;
@@ -109,12 +106,12 @@ body, html {
 }
 
 .show-foreground-button {
+    fill: var(--on-surface);
     position: absolute;
     right: 0;
     display: inline-block;
     vertical-align: top;
     padding: 16px;
-    fill: var(--text-color);
 }
 
 .hidden {
